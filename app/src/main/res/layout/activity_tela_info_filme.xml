@@ -1,70 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="@color/fundo"
     tools:context=".TelaInfoFilme">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/fundo2"
+            app:layout_constraintBottom_toTopOf="@id/resultadoDaBuscaTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
-            android:id="@+id/movieTitleTextView"
+            android:id="@+id/resultadoDaBuscaTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Título do Filme"
-            android:textSize="24sp"
-            android:padding="8dp"
+            android:fontFamily="@font/poppins_bold"
             android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:text="Resultado da Busca"
+            android:textColor="@color/white"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+        <TextView
+            android:id="@+id/nomeFilme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Título do Filme"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultadoDaBuscaTextView" />
 
         <ImageView
-            android:id="@+id/moviePosterImageView"
+            android:id="@+id/poster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
-            app:layout_constraintTop_toBottomOf="@id/movieTitleTextView"
+            app:layout_constraintTop_toBottomOf="@id/nomeFilme"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/movieOverviewTextView"/>
+            android:layout_marginTop="8dp" />
 
         <TextView
-            android:id="@+id/movieOverviewTextView"
+            android:id="@+id/sinopseFilme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Visão Geral do Filme"
-            android:textSize="16sp"
+            android:fontFamily="@font/poppins_bold"
             android:padding="8dp"
+            android:text="Sinopse do Filme"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/poster"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/moviePosterImageView"
-            app:layout_constraintBottom_toTopOf="@id/releaseDateTextView"/>
+            android:layout_marginTop="8dp" />
 
         <TextView
-            android:id="@+id/releaseDateTextView"
+            android:id="@+id/sinopse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:padding="40dp"
+            android:text="Sinopse do Filme"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/sinopseFilme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Data de Lançamento"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/sinopse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/dataLancamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
             android:text="Data de Lançamento: "
+            android:textColor="@color/fundo"
+            android:background="@drawable/caixa_text"
             android:textSize="16sp"
-            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/data"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/movieOverviewTextView"
-            app:layout_constraintBottom_toTopOf="@id/voteAverageTextView"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
 
         <TextView
-            android:id="@+id/voteAverageTextView"
+            android:id="@+id/mediaFilme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Média: "
-            android:textSize="16sp"
             android:padding="8dp"
+            android:text="Média"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/dataLancamento"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/releaseDateTextView"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Média "
+            android:textColor="@color/fundo"
+            android:textSize="16sp"
+            android:background="@drawable/circulo"
+            android:gravity="center"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@id/mediaFilme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/voltar"
+            android:text="Voltar"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="16sp"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"
+            android:layout_width="200dp"
+            android:onClick="voltarParaInicio"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintTop_toBottomOf="@id/media"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

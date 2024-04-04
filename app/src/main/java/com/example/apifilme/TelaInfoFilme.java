@@ -2,7 +2,9 @@ package com.example.apifilme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -89,7 +91,7 @@ public class TelaInfoFilme extends AppCompatActivity {
                         if (resultsArray.length() > 0) {
                             JSONObject firstMovie = resultsArray.getJSONObject(0);
 
-                            // Obter dados do Filme
+                            // Obter dados do Filme que estao no arquivo JSON
                             String movieTitle = firstMovie.getString("title");
                             String movieImage = firstMovie.getString("poster_path");
                             String movieOverview = firstMovie.getString("overview");
@@ -103,23 +105,27 @@ public class TelaInfoFilme extends AppCompatActivity {
                             Date date = inputFormat.parse(releaseDate);
                             releaseDate = outputFormat.format(date);
 
+                            // Formatar a media
+                            String mediaFormatada = String.format("%.2f", voteAverage);
+
                             // Atualizar os TextViews com os dados do filme
-                            TextView tituloFilme = findViewById(R.id.movieTitleTextView);
-                            TextView sinopseFilme = findViewById(R.id.movieOverviewTextView);
-                            TextView dataLancamentoFilme = findViewById(R.id.releaseDateTextView);
-                            TextView mediaFilme = findViewById(R.id.voteAverageTextView);
-                            ImageView posterFilme = findViewById(R.id.moviePosterImageView);
+                            TextView tituloFilme = findViewById(R.id.nomeFilme);
+                            TextView sinopseFilme = findViewById(R.id.sinopse);
+                            TextView dataLancamentoFilme = findViewById(R.id.dataLancamento);
+                            TextView mediaFilme = findViewById(R.id.media);
+                            ImageView posterFilme = findViewById(R.id.poster);
 
                             tituloFilme.setText(movieTitle);
                             sinopseFilme.setText(movieOverview);
-                            dataLancamentoFilme.setText("Data de Lançamento: " + releaseDate);
-                            mediaFilme.setText("Média: " + voteAverage);
+                            dataLancamentoFilme.setText( releaseDate);
+                            mediaFilme.setText(mediaFormatada);
 
-                            // Carregar e exibir o pôster do filme
+                            // carregar o poster da internet
                             Picasso.get().load("https://image.tmdb.org/t/p/w500" + movieImage).into(posterFilme);
                         } else {
-                            // Se não houver resultados, exibir uma mensagem
+                            // caso nao haja filme
                             Toast.makeText(TelaInfoFilme.this, "Nenhum filme encontrado", Toast.LENGTH_SHORT).show();
+                            voltarParaInicio(null);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -132,5 +138,11 @@ public class TelaInfoFilme extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void voltarParaInicio(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

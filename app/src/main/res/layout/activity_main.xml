@@ -23,7 +23,7 @@
         android:gravity="center"
         android:fontFamily="@font/poppins_bold"
         android:textSize="26sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/imageView"
         android:padding="16dp" />
