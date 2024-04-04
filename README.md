@@ -1,17 +1,17 @@
-# MovieLover - Consumo da API TMDB (The Movie Database) 
+# FilmeLover - Consumo da API TMDB (The Movie Database) 
 
-Esse micro app tem como objetivo utilizar a API gratuita da TMDB para Buscar e mostrar: Sinopse, Nome, Imagem, Data de Lançamento e Média, do respectivo filme procurado.
+Este micro app tem como objetivo utilizar a API gratuita da TMDB para buscar e mostrar: sinopse, nome, imagem, data de lançamento e média do respectivo filme procurado.
 
 ## Funcionalidades 🛠️
 
 | Funcionalidade          | Descrição                                                                                       |
 |-------------------------|-------------------------------------------------------------------------------------------------|
-| Buscar um filme        | O usuário pesquisa um filme na Barra de Pesquisa e é redirecionado para uma segunda Tela que exibe as informações desse Filme. |
+| Buscar um filme        | O usuário pesquisa um filme na barra de pesquisa e é redirecionado para uma segunda tela que exibe as informações desse filme. |
 
 
 ## Tecnologias Utilizadas 🚀
 
-- **The Movie Database API**: Ser o banco de dados para buscar as informações do Filme
+- **The Movie Database API**: Serviço de banco de dados para buscar as informações do filme.
 
 ## Como Usar 📋
 
@@ -22,46 +22,47 @@ Esse micro app tem como objetivo utilizar a API gratuita da TMDB para Buscar e m
 
 ## Telas 📱
 ### Tela de Pesquisa
-<p>Permite que o usuário digite um Filme</p>
-<img src="https://github.com/LarissaSL/LoginComFirebase/assets/112571317/1a7c1a06-0c92-4425-9cd9-5fdc23a2aa4a" width="300">
+<p>Permite que o usuário digite um filme.</p>
+<img src="https://github.com/LarissaSL/APIFilme_Mobile/assets/112571317/c2b4e21c-6bcf-41e1-aa2d-3638fd45f268" width="300">
 
 ### Tela de Resultado
-<p>Exibe os dados do Filme pesquisado</p>
-<img src="https://github.com/LarissaSL/LoginComFirebase/assets/112571317/53da6d4a-f5fe-41c0-a4c5-1799d9081514" width="300">
+<p>Exibe os dados do filme pesquisado.</p>
+<img src="https://github.com/LarissaSL/APIFilme_Mobile/assets/112571317/518723c9-b780-41be-adab-f5e3b818dbbf" width="300">
 
 ## Desenvolvimento
 
 | Desenvolvimento                           | Descrição                                                                                                                                                                            |
 |-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Separação dos Icones e Imagens para a Pasta Drawable | Organização dos recursos visuais, como ícones e imagens, em diretórios específicos dentro da pasta `res` do projeto Android.                                                  |
+| Separação dos Ícones e Imagens para a Pasta Drawable | Organização dos recursos visuais, como ícones e imagens, em diretórios específicos dentro da pasta `res` do projeto Android.                                                  |
 | Criação dos Layouts Provisórios  | Desenvolvimento dos layouts de interface do usuário (XML) para as diferentes telas da aplicação. |
-| Consumir a API | Preparando uma função para Consumir a API TMDB. |
-| Separar a Lógica de Busca e da Trocar as informações na View | Criação de duas funções , uma para Buscar na API os dados do Filme e outra para Exibir esses resultados na View pro Usuario. |
-| Criação dos Layouts Oficiais | Desenvolvimento do Layout oficial do APP, começando pelo Main Activity e depois a TelaInfoFilme. |
-| Lógica para caso não existir o Filme | Lógica para redirecionar para a tela principal e exibir uma mensagem de Erro ao tentar buscar um filme que não existe. |
-| Lógica botão voltar | Criar a função de voltarParaInicio, fazendo o usuário ser redirecionado a Tela Principal depois de realizar uma busca. |
+| Consumo da API | Preparação de uma função para consumir a API TMDB. |
+| Separação da Lógica de Busca e da Troca das Informações na View | Criação de duas funções: uma para buscar na API os dados do filme e outra para exibir esses resultados na view para o usuário. |
+| Criação dos Layouts Oficiais | Desenvolvimento do layout oficial do app, começando pelo Main Activity e depois pela TelaInfoFilme. |
+| Lógica para caso não exista o Filme | Lógica para redirecionar para a tela principal e exibir uma mensagem de erro ao tentar buscar um filme que não existe. |
+| Lógica botão voltar | Criação da função `voltarParaInicio`, permitindo que o usuário seja redirecionado para a tela principal depois de realizar uma busca. |
 
-## 🎥 Materiais de Apoio Usados
+## 🎥 Materiais de Apoio Utilizados
 
 Aqui estão alguns vídeos que utilizei como apoio durante o desenvolvimento:
 
-- [![YouTube Video 1]([https://img.shields.io/badge/Assistir-Video%201-red)](https://youtu.be/8gp5zWOZT0c](https://www.youtube.com/watch?v=3YVhWjIUkKY&t=1s)) **Como usar a API do The Movie Database em Java: Exemplo prático**
+- [![YouTube Video 1](https://img.shields.io/badge/Assistir-Video%201-red)](https://www.youtube.com/watch?v=3YVhWjIUkKY&t=1s) **Como usar a API do The Movie Database em Java: Exemplo prático**
 
-- [![YouTube Video 2]([https://img.shields.io/badge/Assistir-Video%202-red)](https://youtu.be/UiFl3hCQu_I](https://www.youtube.com/watch?v=jfPhS_ZCr9g)) **Importando fontes do Google Fonte pelo Android Studio**
+- [![YouTube Video 2](https://img.shields.io/badge/Assistir-Video%202-red)](https://www.youtube.com/watch?v=jfPhS_ZCr9g) **Importando fontes do Google Fonts pelo Android Studio**
 
-- [Documentação Oficial da API TMDB]([https://developer.android.com/topic/libraries/view-binding?hl=pt-br](https://developer.themoviedb.org/docs/getting-started))
+- [Documentação Oficial da API TMDB](https://developer.themoviedb.org/docs/getting-started)
 
 
 ## Simulação 🎬
 
 Aqui está uma simulação do aplicativo em funcionamento:
 
-![Busca](https://github.com/LarissaSL/LoginComFirebase/assets/112571317/b7eab613-4c1f-4af6-9af2-99677a44c163)
+![Simulação do Aplicativo](https://github.com/LarissaSL/APIFilme_Mobile/blob/main/API_Filme.gif)
 
 
 ## Licença ⚖️
 
 Imagens de Freepik
-Font do Google Fonts
+
+Fonte do Google Fonts
 
 Design por LarissaSL
